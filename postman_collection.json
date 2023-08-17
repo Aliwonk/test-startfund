@@ -1,0 +1,389 @@
+{
+	"info": {
+		"_postman_id": "1ad27614-f288-4684-947e-1042f78ff468",
+		"name": "test-starfund",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23533078",
+		"_collection_link": "https://grey-flare-498820.postman.co/workspace/AIDYSH~880ff616-cf22-4be1-8290-f866b55afc68/collection/23533078-1ad27614-f288-4684-947e-1042f78ff468?action=share&source=collection_link&creator=23533078"
+	},
+	"item": [
+		{
+			"name": "fighters",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "img",
+									"type": "file",
+									"src": "/C:/Users/Admin/Desktop/HT/image/125102-iskusstvo-videoigra-igra-geralt_iz_rivii-fan_art-1920x1080.jpg"
+								},
+								{
+									"key": "nickname",
+									"value": "white bear",
+									"type": "text"
+								},
+								{
+									"key": "surname",
+									"value": "Barateon",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "John",
+									"type": "text"
+								},
+								{
+									"key": "height",
+									"value": "170",
+									"type": "text"
+								},
+								{
+									"key": "weight",
+									"value": "60",
+									"type": "text"
+								},
+								{
+									"key": "nationality",
+									"value": "american",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "male",
+									"type": "text"
+								},
+								{
+									"key": "dateofbirth",
+									"value": "29.02.2004",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{backend_url}}/fighters/create",
+							"host": [
+								"{{backend_url}}"
+							],
+							"path": [
+								"fighters",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"wins\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{backend_url}}/fighters/update/bd447b8c-943d-4561-98fc-37a1d046bb2a",
+							"host": [
+								"{{backend_url}}"
+							],
+							"path": [
+								"fighters",
+								"update",
+								"bd447b8c-943d-4561-98fc-37a1d046bb2a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{backend_url}}/fighters/get-one/8ba8b70d-ba96-4550-b31d-4e87754bbf1c",
+							"host": [
+								"{{backend_url}}"
+							],
+							"path": [
+								"fighters",
+								"get-one",
+								"8ba8b70d-ba96-4550-b31d-4e87754bbf1c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{backend_url}}/fighters/get-all",
+							"host": [
+								"{{backend_url}}"
+							],
+							"path": [
+								"fighters",
+								"get-all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{backend_url}}/fighters/delete/208eea57-0162-4068-a258-ecc03997d165",
+							"host": [
+								"{{backend_url}}"
+							],
+							"path": [
+								"fighters",
+								"delete",
+								"208eea57-0162-4068-a258-ecc03997d165"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "fights",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_fighters\": [\r\n        \"481aa934-8fb9-4144-ac46-564c1be964ca\",\r\n        \"57eaa658-cbcd-48f1-a487-4bc45e13eac9\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{backend_url}}/fights/create",
+							"host": [
+								"{{backend_url}}"
+							],
+							"path": [
+								"fights",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"winner\": {\r\n        \"id\": \"8ba8b70d-ba96-4550-b31d-4e87754bbf1c\",\r\n        \"knockouts\": 2,\r\n        \"submission\": 1,\r\n        \"rating\": 10\r\n    },\r\n    \"loser\": {\r\n        \"id\": \"78f456cb-b09b-4c55-81bf-651ed988b202\",\r\n        \"knockouts\": 0,\r\n        \"submission\": 1,\r\n        \"rating\": 3\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{backend_url}}/fights/update/2e499614-6ca1-4d1c-b376-19fc016ef01f",
+							"host": [
+								"{{backend_url}}"
+							],
+							"path": [
+								"fights",
+								"update",
+								"2e499614-6ca1-4d1c-b376-19fc016ef01f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{backend_url}}/fights/get-one/24a9559c-dc95-4a9e-a2b4-edcddd2fff1c",
+							"host": [
+								"{{backend_url}}"
+							],
+							"path": [
+								"fights",
+								"get-one",
+								"24a9559c-dc95-4a9e-a2b4-edcddd2fff1c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{backend_url}}/fights/delete/24a9559c-dc95-4a9e-a2b4-edcddd2fff1c",
+							"host": [
+								"{{backend_url}}"
+							],
+							"path": [
+								"fights",
+								"delete",
+								"24a9559c-dc95-4a9e-a2b4-edcddd2fff1c"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "events",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"location\": \"Moscow\",\r\n    \"date\": \"20.09.2024\",\r\n    \"time\": \"21:00\",\r\n    \"id_fights\": [\r\n        \"c2160c88-01e6-441e-95bc-ccaa758f1ad0\",\r\n        \"2e499614-6ca1-4d1c-b376-19fc016ef01f\",\r\n        \"a8fb32a0-258a-4f33-9da8-8aa2bcb75734\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{backend_url}}/events/create",
+							"host": [
+								"{{backend_url}}"
+							],
+							"path": [
+								"events",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{backend_url}}/events/update",
+							"host": [
+								"{{backend_url}}"
+							],
+							"path": [
+								"events",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{backend_url}}/events/get-one/857a375e-3bf4-4627-b05f-20428bcacc25",
+							"host": [
+								"{{backend_url}}"
+							],
+							"path": [
+								"events",
+								"get-one",
+								"857a375e-3bf4-4627-b05f-20428bcacc25"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{backend_url}}/events/delete/a784530e-74ed-4c1a-9774-f7f0ce829256",
+							"host": [
+								"{{backend_url}}"
+							],
+							"path": [
+								"events",
+								"delete",
+								"a784530e-74ed-4c1a-9774-f7f0ce829256"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "rankings",
+			"item": []
+		},
+		{
+			"name": "teams",
+			"item": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "backend_url",
+			"value": "http://localhost:3005",
+			"type": "string"
+		}
+	]
+}
